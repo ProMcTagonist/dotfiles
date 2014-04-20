@@ -92,3 +92,23 @@ display:none;
 	margin: -3px -9px 0 0 !important;
 	border:none!important}
 	
+/*disable animations thx anon*/
+.panel-arrowcontainer 
+	{opacity: 1;
+	transform: none;
+	transition: none !important;
+	pointer-events: all !important;}
+
+#BMB_bookmarksPopup 
+	{transform: none !important;
+	transition-duration: 1ms !important;}
+
+panel[type="arrow"]:not([animate="false"]) 
+	{transform: none !important;
+  	transition-duration: 1ms !important;}
+
+#PanelUI-popup * 
+	{transition: none !important;}
+
+findbar 
+	{transition: none !important;}
