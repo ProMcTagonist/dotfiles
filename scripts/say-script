@@ -1,0 +1,13 @@
+#!/bin/bash
+echo ":quit to exit"
+while true
+	do
+		echo -n ">"
+		read var
+			if [ "$var" = ":quit" ]; then
+				exit
+			
+			else
+				mplayer -really-quiet "http://translate.google.com/translate_tts?tl=en&q=$var";
+			fi
+	done

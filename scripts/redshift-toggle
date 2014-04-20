@@ -1,0 +1,14 @@
+#!/bin/bash
+
+var=$(pidof redshift)
+
+
+#test for -zero length string
+
+if [ -z $var ]; then
+    redshift -l yourlat:yourlong -t 6500:4500&
+	notify-send "redshift on"
+else
+	kill `pidof redshift`&
+	notify-send "redshift off"
+fi

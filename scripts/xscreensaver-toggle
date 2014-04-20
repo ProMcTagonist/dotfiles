@@ -1,0 +1,14 @@
+#!/bin/bash
+
+var=$(pidof xscreensaver)
+
+
+#test for -zero length string
+
+if [ -z $var ]; then
+    xscreensaver -no-splash&
+	notify-send "Screensaver on"
+else
+	xscreensaver-command -exit&
+	notify-send -u critical "Screensaver off"
+fi

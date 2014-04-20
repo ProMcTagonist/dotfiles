@@ -1,0 +1,16 @@
+#!/bin/bash
+
+var=$(cat /tmp/sc)
+
+
+#test for -zero length string
+
+if [ -z $var ]; then
+	xmodmap -e "pointer = 1 2 3 4 5" &
+	notify-send "mainstream, ugh" &
+	echo "this is a temp file for scroll direction toggling" >> /tmp/sc
+else
+	xmodmap -e "pointer = 1 2 3 5 4" &
+	notify-send "lion" &
+	rm /tmp/sc
+fi
